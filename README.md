@@ -8,4 +8,23 @@ The InsiGPT model consists of several layers of self-attention and feedforward n
 
 Uses tiny shakespeare dataset and custom model to generate text sequences.
 
-`in Development`
+To Execute: `Python modelInvoke.py -m_path 'pretrained model'`
+
+Sample text Generated:
+
+ROMEO:
+What this word, not be't to vycound's friend ere's,
+My slait this is eye?
+
+LEONTES:
+YORK:
+Have, not I my fine.
+
+ANGELO:
+When you hast thou would not thing assay.
+
+
+
+
+
+**Under Development**
