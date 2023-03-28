@@ -6,5 +6,6 @@ InsiGPT architecture is based on the Transformer model, which uses self-attentio
 
 The InsiGPT model consists of several layers of self-attention and feedforward neural networks, with residual connections and layer normalization applied at each layer. The final layer outputs a probability distribution over the vocabulary, which is used to generate the next token in the sequence during training and inference.
 
+Uses tiny shakespeare dataset and custom model to generate text sequences.
 
 `in Development`
