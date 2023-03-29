@@ -10,8 +10,8 @@ import helper
 # hyperparameters
 batch_size = 16 # how many independent sequences will we process in parallel?
 block_size = 32 # what is the maximum context length for predictions?
-max_iters = 6000
-eval_interval = 100
+max_iters = 4000
+eval_interval = 200
 learning_rate = 1e-3
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 eval_iters = 200
@@ -65,8 +65,6 @@ def estimate_loss():
 
 model = helper.BigramLanguageModel()
 m = model.to(device)
-# print the number of parameters in the model
-print(sum(p.numel() for p in m.parameters())/1e6, 'M parameters')
 
 # create a PyTorch optimizer
 optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)
@@ -95,3 +93,4 @@ timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 filename = f"model_{timestamp}.pt"
 filePath=os.path.join(model_path,filename)
 torch.save(m.state_dict(), filePath)
+print("Model saved into: "+ filePath)
